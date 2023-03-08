@@ -1,6 +1,4 @@
-#include "Actuator.h"
-
-// RELAY CLASS:
+#include "Relay.h"
 
 Relay::Relay(byte pin)
 {
@@ -50,44 +48,4 @@ bool Relay::timeout()
 uint32_t Relay::activeTime()
 {
   return _activeTime;
-}
-
-
-// LED CLASS:
-
-LED::LED(byte pin)
-{
-  _pin = pin;
-  _state = false;
-  _interval = 0;
-  _lastMillis = 0;
-
-  pinMode(_pin, OUTPUT);
-}
-
-void LED::blinkInterval(uint32_t interval)
-{
-  _interval = interval;
-}
-
-void LED::blink()
-{
-  if (millis() - _lastMillis > _interval)
-  {
-    _lastMillis = millis();
-    _state = !_state;
-    digitalWrite(_pin, _state);
-  }
-}
-
-void LED::on()
-{
-  _state = true;
-  digitalWrite(_pin, _state);
-}
-
-void LED::off()
-{
-  _state = false;
-  digitalWrite(_pin, _state);
 }

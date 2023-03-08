@@ -1,24 +1,7 @@
-#ifndef ACTUATOR_H
-#define ACTUATOR_H
+#ifndef RELAY_ARDUINO_H
+#define RELAY_ARDUINO_H
 
 #include <Arduino.h>
-
-class LED
-{
-  public:
-    LED(byte pin);
-
-    void blinkInterval(uint32_t interval);
-    void blink();
-    void on();
-    void off();
-
-  private:
-    byte _pin;
-    uint32_t _interval;
-    uint32_t _lastMillis;
-    bool _state;
-};
 
 class Relay
 {
