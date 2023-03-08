@@ -1,5 +1,5 @@
 # arduino-actuator
-Common actuators in arduino frameworks
+Common actuators for arduino / esp
 
 Just for learning purpose
 
